@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+ #!/usr/bin/env python
 # coding: utf-8
 
 # In[55]:
@@ -9,6 +9,7 @@ import os
 import pandas as pd
 from bs4 import BeautifulSoup 
 from splinter import Browser
+# from flask_pymongo import PyMongo
 import pymongo
 import requests
 import time
@@ -110,7 +111,7 @@ def scrape():
     soup = BeautifulSoup(html, "html.parser")
 
     # featured_image_url
-    featured_image_url="https://www.jpl.nasa.gov"+soup.find("article")['style'].split("('", 1)[1].split("')")[0]
+    # featured_image_url="https://www.jpl.nasa.gov"+soup.find("article")['style'].split("('", 1)[1].split("')")[0]
     # print(featured_image_url)
 
 

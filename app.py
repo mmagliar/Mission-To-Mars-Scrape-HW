@@ -29,7 +29,7 @@ def scrape():
     mars_dict = {
         "news_title": mars["news_title"],
         "news_p": mars["news_p"],
-        "featured_image_url": mars["featured_image_url"],
+        # "featured_image_url": mars["featured_image_url"],
         "mars_weather": mars["mars_weather"],
         "table_html": mars["table_html"],
         "hemisphere_image_urls": mars["hemisphere_image_urls"]
