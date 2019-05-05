@@ -8,8 +8,8 @@
 import os
 import pandas as pd
 from bs4 import BeautifulSoup 
-from splinter import Browser
-# from flask_pymongo import PyMongo
+from splinter import Browser 
+from flask_pymongo import PyMongo
 import pymongo
 import requests
 import time
@@ -111,7 +111,7 @@ def scrape():
     soup = BeautifulSoup(html, "html.parser")
 
     # featured_image_url
-    # featured_image_url="https://www.jpl.nasa.gov"+soup.find("article")['style'].split("('", 1)[1].split("')")[0]
+    featured_image_url="https://www.jpl.nasa.gov"+soup.find("article")['style'].split("('", 1)[1].split("')")[0]
     # print(featured_image_url)
 
 
@@ -236,7 +236,7 @@ def scrape():
     mars = {
             "news_title":news_title,
             "news_p":news_p,
-    #      "featured_image_url":featured_image_url,
+            "featured_image_url":featured_image_url,
             "mars_weather":mars_weather,
             "table_html":table_html,
             "hemisphere_image_urls":hemisphere_image_urls

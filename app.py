@@ -29,7 +29,7 @@ def scrape():
     mars_dict = {
         "news_title": mars["news_title"],
         "news_p": mars["news_p"],
-        # "featured_image_url": mars["featured_image_url"],
+        "featured_image_url": mars["featured_image_url"],
         "mars_weather": mars["mars_weather"],
         "table_html": mars["table_html"],
         "hemisphere_image_urls": mars["hemisphere_image_urls"]
@@ -39,6 +39,7 @@ def scrape():
 
     # Redirect back to home page
     #return redirect("http://localhost:5000/", code=302)    
+    return 'This is the End'
 
 if __name__ == "__main__":
     app.run(debug=True)
