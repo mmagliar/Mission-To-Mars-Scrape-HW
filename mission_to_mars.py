@@ -111,8 +111,14 @@ def scrape():
     soup = BeautifulSoup(html, "html.parser")
 
     # featured_image_url
-    featured_image_url="https://www.jpl.nasa.gov"+soup.find("article")['style'].split("('", 1)[1].split("')")[0]
+    #featured_image_url="https://www.jpl.nasa.gov"+soup.find("article")['style'].split("('", 1)[1].split("')")[0]
     # print(featured_image_url)
+    featured_image = soup.find("li", class_="slide")
+    featured_image_fragment = featured_image.find(class_="fancybox")['data-fancybox-href']
+
+    base_url = "https://www.jpl.nasa.gov"
+
+    featured_image_url = base_url + featured_image_fragment
 
 
     # In[64]:
