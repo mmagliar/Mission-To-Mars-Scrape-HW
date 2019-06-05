@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify, redirect
 from flask_pymongo import PyMongo
 # Import our pymongo library, which lets us connect our Flask app to our Mongo database.
 
@@ -38,8 +38,8 @@ def scrape():
     mongo.db.collection.insert_one(mars_dict)
 
     # Redirect back to home page
-    #return redirect("http://localhost:5000/", code=302)    
-    return 'This is the End'
+    return redirect("http://localhost:5000/", code=302)    
+    #return 'This is the End'
 
 if __name__ == "__main__":
     app.run(debug=True)
